@@ -1,0 +1,60 @@
+DESAFIO 1 - ETAPA 3 - Final (Animação)
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Para a criação das animações usamos a biblioteca JavaScript ScrollReveal.
+
+Você também pode seguir os passos no site deles
+Link da bibiblioteca JS => https://scrollrevealjs.org/
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Para adicionar a animação é bem simples!
+
+Cole no final do seu arquivo index.html (antes do fechamento do html e body) o script abaixo:
+<script src="https://unpkg.com/scrollreveal"></script>
+
+*Temos o exemplo dele no arquivo exemplo0.png*
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Logo abaixo, cole esse script para animar: 
+
+<script>
+        const sr = ScrollReveal({
+            origin: 'top',
+            distance: '50px',
+            duration: 2000,
+            reset: true
+        });
+
+        ScrollReveal().reveal('.container-post', { delay: 200 });
+        ScrollReveal().reveal('.date', { delay: 400 });
+        ScrollReveal().reveal('.title', { delay: 500 });
+        ScrollReveal().reveal('.description', { delay: 600 });
+</script>
+
+*Temos o exemplo dele no arquivo exemplo1.png*
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Observações:
+
+Observe que no script temos '.container-post', '.date', '.title' e '.description'. Essas são classes que criei nas tags html pai;
+*Temos o exemplo dele no arquivo exemplo2.png*
+
+O 'delay: XXX' é a demora que a animação irá aparecer;
+
+O 'origin: 'top'' é a origem de onde a animação está vindo (você pode mudar a direção da forma que quiser);
+
+O 'distance: '50px'' é a distância do começo da animação;
+
+O 'duration: 2000' é a velocidade da animação (é diferente do delay);
+
+O 'reset: true' é o reset da animação, então toda vez que você fazer o scroll a animação vai ocorrer;
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Você pode ver o uso da animação em => https://iuricode.github.io/codelandia/
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,198 @@
+/*Variáveis*/
+:root {
+  --bgSite: #f6f6f6;
+  --bgCard: #ebe9ea;
+  
+  --white: #f9f9f9;
+
+  --title: #181818;
+  --text: #474747;
+}
+
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+input {
+  border: 0;
+}
+
+button:focus,
+input:focus {
+  border: 0;
+}
+/* FONTES */
+@font-face{
+  font-family: 'Montserrat-bold';
+  src: url(../fontes/Montserrat-Bold.ttf) format('truetype');
+}
+
+@font-face{
+  font-family: 'Montserrat-semibold';
+  src: url(../fontes/Montserrat-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat-medium';
+  src: url(../fontes/Montserrat-Medium.ttf) format('truetype');
+}
+
+/* >>>>>>>>> HEADER <<<<<<<<<*/
+
+#todo_site{
+  background-color: var(--bgSite);
+  margin: 0 auto;
+  font-family: 'Montserrat-medium';
+}
+
+#sup_menu{
+  background-color: var(--title);
+  color: var(--white);
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.9em;
+  padding: 20px;
+}
+
+#titulo{
+  text-align: center;
+  background-color: var(--white);
+  font-family: 'Montserrat-semibold';
+  font-size: 1em;
+  font-weight: 600;
+  padding: 10px;
+}
+
+#descricao{
+  background: no-repeat center/cover url('../img/wallpaper.jpeg');
+  height: 40vh;
+}
+
+#textos_descricao{
+  max-width: 1300px;
+  text-align: left;
+  margin: 0 auto;
+  padding-left: 30px;
+}
+
+
+#textos_descricao h2{
+  font-family: 'Montserrat-semibold';
+  color: var(--white);
+  padding-top: 15vh;
+  margin-bottom: 1vh;
+  font-weight: 700;
+}
+
+#textos_descricao p{
+  font-family: 'Montserrat-semibold';
+  font-weight: 600;
+  color: var(--white);
+  max-width: 400px;
+}
+
+/* >>>>>>>>> MAIN <<<<<<<<*/
+
+#corpo{
+  max-width: 1300px;
+  margin: 6vh auto;
+  text-align: center;
+}
+
+#corpo h2{
+  font-family: 'Montserrat-semibold';
+  font-weight: 600;
+  margin: 2vh auto;
+}
+
+#corpo p{
+  font-family: 'Montserrat-medium';
+  margin: 2vh 1vw 6vh;
+}
+
+.conjunto_tenis{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tenis{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: var(--bgCard);
+  width: 300px;
+  height: 300px;
+}
+
+@media(max-width: 700px){
+  #textos_descricao{
+    text-align: center;
+  }
+
+  #textos_descricao p{
+    max-width: 600px;
+  }
+
+  .tenis{
+    justify-content: center;
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .tenis img{
+    max-width: 400px;
+    max-height: 250px;
+  }
+}
+/* >>>>>> RODAPE <<<<<< */
+
+#rodape{
+  font-family: 'Montserrat-medium';
+  font-weight: 500;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--title);
+  color: var(--white);
+}
