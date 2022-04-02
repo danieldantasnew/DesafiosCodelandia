@@ -223,19 +223,29 @@ input:focus {
 }
 
 .entradas input{
+  font-size: 1.125em;
   height: 60px;
   width: 50%;
   border-radius: 5px;
   outline: none;
-}
-
-.entradas ::placeholder{
   padding-left: 10px;
-  font-size: 1.125em;
 }
 
 #mensagem{
   height: 200px;
+  width: 50%;
+  border-radius: 5px;
+  outline: none;
+  padding-left: 10px;
+  padding-top: 10px;
+  font-size: 1.125em;
+  resize: none; /*Resize retira a opção de redimensionamento ficando com o tamanho "fixo" (setado antes)*/
+  border: transparent;
+}
+
+#mensagem::placeholder{
+  font-family: 'Merri-regular';
+  font-weight: normal;
 }
 
 #botao-msg{
@@ -251,13 +261,30 @@ input:focus {
 
   .cards{
     justify-content: center;
+    padding-left: 0;
   }
 
   .entradas input{
     width: 60%;
   }
 
+  #mensagem{
+    width: 60%;
+  }
+
   #botao-msg{
     width: 60%;
+  }
+}
+
+@media (min-width: 637px) and (max-width: 966px){
+  .cabeca{
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 970px) and (max-width: 1027px){
+  .cards{
+    gap: 30px;
   }
 }
