@@ -1,0 +1,248 @@
+/*Variáveis*/
+:root {
+  --bgSite: #d7d4ff;
+  --buttonColor: #6c63ff;
+
+  --white: #ffffff;
+  --white300: #f9f9f9;
+
+  --title: #2b2b2b;
+  --text: #555555;
+}
+
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+button,
+input {
+  border: 0;
+}
+button:focus,
+input:focus {
+  border: 0;
+}
+
+/* CSS EM SI */
+
+@font-face {
+  font-family: 'Lato-regular';
+  src: url('../fontes/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: 'Merri-bold';
+  src: url('../fontes/Merriweather-Bold.ttf') format('truetype');
+}
+
+@font-face{
+  font-family: 'Merri-regular';
+  src: url('../fontes/Merriweather-Regular.ttf') format('truetype');
+}
+/* CABEÇALHO */
+
+.bg-header{
+  background-color: var(--bgSite);
+  width: 100%;
+  height: 40vh;
+}
+
+.cabeca{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+
+.header-1{
+  max-width: 450px;
+  padding-left: 5vw;
+  margin-top: 50px;
+  line-height: 30px;
+}
+
+.header-1 > h1{
+  font-family: 'Merri-regular';
+  font-weight: 400;
+  line-height: 50px;
+  font-size: 2.25em;
+  color: var(--title);
+}
+
+.header-1 > p{
+  font-family: 'Lato-regular';
+  font-weight: 400;
+  font-size: 1.1875em;
+}
+
+#botao-header{
+  margin-top: 30px;
+  padding: 10px 40px;
+  border-radius: 5px;
+  background-color: var(--buttonColor);
+  color: var(--white);
+  font-family: 'Lato-regular';
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.header-2 img{
+  width: 500px;
+  height: 400px;
+  padding-right: 5vw;
+}
+
+/* CORPO PRINCIPAL */
+
+.cards{
+  margin: 10vh auto;
+  padding-left: 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 60px;
+  max-width: 1200px;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  box-shadow: 0px 1px 4px 0.5px rgba(0, 0, 0, 0.171);
+  width: 280px;
+  height: 330px;
+}
+
+.textos{
+  margin: 30px;
+}
+
+.textos h1{
+  font-family: 'Merri-bold';
+  font-weight: 700;
+}
+
+.textos > p{
+  margin-top: 2vh;
+  padding-left: 3px;
+  font-family: 'Lato-regular';
+  line-height: 30px;
+}
+
+.cores{
+  height: 170px;
+  width: 100%;
+  box-shadow: 0px 1px 2px 0.5px rgba(0, 0, 0, 0.171);
+}
+
+#vermelho{
+  background-color: #FF6363;
+}
+
+#ciano{
+  background-color: #63ECFF;
+}
+
+#rosa{
+  background-color: #F363FF;
+}
+
+#verde{
+  background-color: #63FF73;
+}
+
+#amarelo{
+  background-color: #FFDD63;
+}
+
+#roxo{
+  background-color: #6663FF;
+}
+
+/* CONTATOS */
+
+.bg-contato{
+  background-color: var(--bgSite);
+  height: 100%;
+  padding-bottom: 60px;
+}
+
+.contato{
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.contato > h1{
+  font-family: 'Merri-regular';
+  font-weight: 400;
+  font-size: 2em;
+  color: var(--title);
+  padding: 5vh 0px;
+}
+
+.entradas{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.entradas input{
+  height: 60px;
+  width: 30%;
+  border-radius: 5px;
+  outline: none;
+}
+
+.entradas ::placeholder{
+  padding-left: 10px;
+  font-size: 1.125em;
+}
+
+#mensagem{
+  height: 200px;
+}
+
+#botao-msg{
+  padding: 10px;
+  width: 30%;
+  border-radius: 5px;
+  font-size: 1em;
+  background-color: var(--buttonColor);
+  color: var(--white);
+}
