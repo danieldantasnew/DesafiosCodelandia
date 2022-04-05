@@ -1,0 +1,84 @@
+/* FONTES */
+
+@font-face {
+  font-family: 'merri';
+  src: url('../fontes/Merriweather-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'lato-regular';
+  src: url('../fontes/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'lato-bold';
+  src: url('../fontes/Lato-Bold.ttf') format('truetype');
+}
+
+/*Variáveis*/
+:root {
+  --green: #04c35c;
+  --blue: #2b6cb0;
+
+  --white: #ffffff;
+  --white300: #f7fafc;
+
+  --dark: #1a202c;
+  --input: #e8e8e8;
+
+  --fonte-1-Merriweather: 'merri';
+  --fonte-2-Lato-regular: 'lato-regular';
+  --fonte-3-Lato-bold: 'lato-bold';
+}
+
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+button,
+input {
+  border: 0;
+}
+button:focus,
+input:focus {
+  border: 0;
+}
+
+.principal{
+
+}
+
+.imagem{
+  background-color: var(--white300);
+}
