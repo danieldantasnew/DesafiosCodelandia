@@ -60,7 +60,15 @@ ol {
 }
 a {
   text-decoration: none;
+  color: var(--blue);
 }
+
+a:hover{
+  transition: 200ms;
+  color: #2b6cb0;
+  font-weight: 600;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -76,9 +84,103 @@ input:focus {
 }
 
 .principal{
-
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  
 }
 
 .imagem{
   background-color: var(--white300);
+}
+
+.imagem img{
+  margin: 10vh auto;
+}
+
+.login{
+  display: grid;
+  justify-content: center;
+}
+
+.login h2{
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.login h1{
+  font-size: 1.625em;
+  margin: 10px 0px;
+}
+
+.entradas{
+  margin: 30px 0;
+}
+.entradas h3{
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.define_tamanho{
+  height: 40px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 1.1em;
+  /* Define o tamanho de todos os inputs e botões */
+}
+
+.entradas input{
+  outline: 1px solid rgba(0, 0, 0, 0.356);
+  padding-left: 10px;
+  margin: 10px 0;
+}
+
+.recuperar{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4vh;
+}
+
+#lembrar{
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.botoes{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+
+#botao_entrar{
+  background-color: var(--green);
+  color: var(--white);
+}
+
+#botao_fazer-login{
+  background-color: var(--dark);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#botao_fazer-login svg{
+  margin-right: 6px;
+  padding-bottom: 3px;
+}
+
+.cadastrar{
+  text-align: center;
+  padding-top: 10px;
+}
+
+@media (max-width: 800px){
+  .imagem{
+    display: none;
+  }
 }
