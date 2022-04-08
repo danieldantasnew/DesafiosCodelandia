@@ -64,7 +64,6 @@ a {
 }
 
 a:hover{
-  transition: 200ms;
   color: #2b6cb0;
   font-weight: 600;
 }
