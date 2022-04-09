@@ -43,6 +43,7 @@ html {
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6rem;
+
 }
 h1,
 h2,
@@ -86,15 +87,20 @@ input:focus {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  
+  height: 100%;
 }
 
 .imagem{
   background-color: var(--white300);
+  height: 100vh;
+  position: relative;
 }
 
 .imagem img{
-  margin: 10vh auto;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
 }
 
 .login{
@@ -128,6 +134,7 @@ input:focus {
   /* Define o tamanho de todos os inputs e botões */
 }
 
+
 .entradas input{
   outline: 1px solid rgba(0, 0, 0, 0.356);
   padding-left: 10px;
@@ -158,6 +165,7 @@ input:focus {
 #botao_entrar{
   background-color: var(--green);
   color: var(--white);
+  cursor: pointer;
 }
 
 #botao_fazer-login{
@@ -166,6 +174,7 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 #botao_fazer-login svg{
