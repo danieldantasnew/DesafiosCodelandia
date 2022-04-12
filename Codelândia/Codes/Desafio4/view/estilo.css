@@ -206,6 +206,11 @@ input:focus {
   }
 
   .lado_direito{
+    padding-top: 10vh;
     width: 100%;
+  }
+
+  .oculta{
+    visibility: hidden;
   }
 }
