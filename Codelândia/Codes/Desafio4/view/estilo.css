@@ -84,43 +84,51 @@ input:focus {
 }
 
 .principal{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  height: 100%;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
 }
 
 .imagem{
   background-color: var(--white300);
-  height: 100vh;
-  position: relative;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
 }
 
-.imagem img{
-  top: 50%;
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%);
+.lado_direito{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .login{
-  display: grid;
-  justify-content: center;
+  width: 350px;
+  color: var(--dark);
+  font-family: var(--fonte-2-Lato-regular);
 }
 
 .login h2{
   font-size: 1em;
   font-weight: 400;
+  font-family: var(--fonte-1-Merriweather);
 }
 
 .login h1{
   font-size: 1.625em;
   margin: 10px 0px;
+  font-family: var(--fonte-1-Merriweather);
 }
 
 .entradas{
   margin: 30px 0;
 }
+
 .entradas h3{
   font-size: 1em;
   font-weight: 400;
@@ -134,7 +142,6 @@ input:focus {
   /* Define o tamanho de todos os inputs e botões */
 }
 
-
 .entradas input{
   outline: 1px solid rgba(0, 0, 0, 0.356);
   padding-left: 10px;
@@ -144,28 +151,34 @@ input:focus {
 .recuperar{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 4vh;
+  font-size: 1em;
 }
 
 #lembrar{
-  border-radius: 50%;
   height: 15px;
   width: 15px;
-  vertical-align: middle;
-  margin-right: 4px;
+  margin-right: 5px;
 }
 
 .botoes{
   display: flex;
   flex-direction: column;
   gap: 10px;
-  
+
 }
 
+.textos_botoes{
+  cursor: pointer;
+  font-family: var(--fonte-3-Lato-bold);
+  font-weight: 700;
+  font-size: 1em;
+}
 #botao_entrar{
   background-color: var(--green);
   color: var(--white);
-  cursor: pointer;
+
 }
 
 #botao_fazer-login{
@@ -174,7 +187,7 @@ input:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+
 }
 
 #botao_fazer-login svg{
@@ -183,12 +196,16 @@ input:focus {
 }
 
 .cadastrar{
-  text-align: center;
   padding-top: 10px;
+  text-align: center;
 }
 
 @media (max-width: 800px){
   .imagem{
     display: none;
+  }
+
+  .lado_direito{
+    width: 100%;
   }
 }
