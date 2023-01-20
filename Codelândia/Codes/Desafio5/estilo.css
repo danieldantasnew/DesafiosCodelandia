@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --verde-escuro: #1a4855;
+    --verde-claro: #628e75;
+    --branco-gelo: #f9f9f9;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right, var(--verde-claro), var(--verde-escuro));
+    color: var(--branco-gelo)
+}
+
+img{
+    max-width: 100%;
+}
+
+body > #corpo_principal{
+    max-width: 1092px;
+    text-align: center;
+}
+body > #principal{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
