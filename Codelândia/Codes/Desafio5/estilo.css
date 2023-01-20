@@ -11,22 +11,104 @@
     --branco-gelo: #f9f9f9;
 }
 
+@font-face {
+    font-family: 'Poppins-Black';
+    src: url(fonts/Poppins-Black.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url(fonts/Poppins-Bold.ttf) format('truetype');
+}
+
+@font-face{
+    font-family: 'Poppins-Medium';
+    src: url(fonts/Poppins-Medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url(fonts/Poppins-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url(fonts/Poppins-SemiBold.ttf) format('truetype');
+}
+
 body{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-image: linear-gradient(to right, var(--verde-claro), var(--verde-escuro));
-    color: var(--branco-gelo)
+    color: var(--branco-gelo);
+    font-family: 'Poppins-Black';
 }
 
 img{
     max-width: 100%;
 }
 
-body > #corpo_principal{
-    max-width: 1092px;
-    text-align: center;
+ul{
+    list-style: none;
 }
-body > #principal{
+
+body > #corpo_principal{
+    max-width: 90%;
+    text-align: center;
+    margin: 3em auto;
+    
+}
+
+body > #corpo_principal > #conteudo{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    margin: 10%; /* Temporario */
 }
+
+body > #corpo_principal > #redes_sociais{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 0px;
+    margin-top: 10px;
+}
+
+body > #corpo_principal > #redes_sociais > div > #logo > img{
+    max-height: 50px;
+}
+
+body > #corpo_principal > #redes_sociais > div > #lista_redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body > #corpo_principal > #redes_sociais > div > #lista_redes > li{
+    padding: 10px;
+}
+
+body > #corpo_principal > #conteudo > #texto{
+    text-align: left;
+}
+
+body > #corpo_principal > #conteudo > #texto > h2{
+    font-size:2em;
+    font-family: 'Poppins-Regular';
+}
+
+body > #corpo_principal > #conteudo > #texto > h1{
+    font-size: 5em;
+}
+
+body > #corpo_principal > #conteudo > #texto > p{
+    font-size: 1em;
+    font-family: 'Poppins-Regular';
+    font-weight: 100;
+}
+
+/* body > #corpo_principal > #conteudo > #imagem{
+    
+} */
