@@ -62,8 +62,8 @@ body > #corpo_principal{
 body > #corpo_principal > #conteudo{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /*alinhamento vertical, não faz diferença nesse caso*/
+    align-items: center; /*alinhamento horizontal, deixou os itens alinhados ao meio, conforme solicitado*/
 }
 
 body > #corpo_principal > #redes_sociais{
