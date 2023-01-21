@@ -115,9 +115,14 @@ body > #corpo_principal > #conteudo > #texto > p{
 body > #corpo_principal > #conteudo > #texto > #organiza_botoes > .botoes{
     font-family: 'Poppins-Medium';
     margin-top: 20px;
-    padding: 1em;
+    padding:  0.7em 1.8em;
     cursor: pointer;
     color: var(--branco-gelo);
+    transform: skew(-24deg);
+}
+
+body > #corpo_principal > #conteudo > #texto > #organiza_botoes > .botoes > .organiza_texto{
+    transform: skew(24deg);
 }
 
 body > #corpo_principal > #conteudo > #texto > #organiza_botoes{
@@ -125,7 +130,7 @@ body > #corpo_principal > #conteudo > #texto > #organiza_botoes{
     flex-direction: row;
 }
 
-body > #corpo_principal > #conteudo > #texto > #organiza_botoes > #botao-PlayNow{
+body > #corpo_principal > #conteudo > #texto > #organiza_botoes > #botao-1{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -135,13 +140,22 @@ body > #corpo_principal > #conteudo > #texto > #organiza_botoes > #botao-PlayNow
     background-color: #67967b;
 }
 
-body > #corpo_principal > #conteudo > #texto > #organiza_botoes > #botao-PlayNow > img{
+body > #corpo_principal > #conteudo > #texto > #organiza_botoes > #botao-1:hover{
+    background-color: rgba(0, 0, 0, 0.24);
+}
+
+body > #corpo_principal > #conteudo > #texto > #organiza_botoes > #botao-1 > img{
     height: 20px;
 }
 
-body > #corpo_principal > #conteudo > #texto > #organiza_botoes >  #botao-PlayTrailer{
+body > #corpo_principal > #conteudo > #texto > #organiza_botoes >  #botao-2{
     background-color: #1a485556;
-    border: 1px solid #628e75;
+    border: 2px solid #628e75;
+}
+
+
+body > #corpo_principal > #conteudo > #texto > #organiza_botoes > #botao-2:hover{
+    background-color: rgba(255, 255, 255, 0.24);
 }
 
 @media (max-width: 980px){
