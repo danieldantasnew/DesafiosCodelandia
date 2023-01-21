@@ -62,7 +62,8 @@ body > #corpo_principal{
 body > #corpo_principal > #conteudo{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 9vh;
+    justify-content: center;
+    align-items: center;
 }
 
 body > #corpo_principal > #redes_sociais{
