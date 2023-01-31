@@ -54,6 +54,7 @@ body > #container > #titulo{
 }
 
 body > #container > #informacoes > #capa{
+    display: block;
     max-width: 200px;
     max-height: 400px;
     border-radius: 10px;
@@ -80,21 +81,50 @@ body > #container > #informacoes > #descricao{
     justify-content: space-between
 }
 
+body > #container > #informacoes > #descricao > #texto{
+    order: 1;
+}
+
 body > #container > #informacoes > #descricao > .caracter{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: flex-end;
+    order: 2;
     font-family: 'Loki-boldItalic';
+}
+
+body > #container > #informacoes > #descricao > .caracter > #relogio{
+    display: flex;
+    gap: 10px;
+}
+
+body > #container > #informacoes > #descricao > .caracter > #relogio > img{
+    height: 28px;
+}
+
+body > #container > #informacoes > #descricao > .caracter > #avaliacao{
+    display: flex;
+    list-style: none;
+}
+
+body > #container > #informacoes > #descricao > .caracter > #avaliacao > .star-icon{
+    color: #ffe500;
+    cursor: pointer;
+}
+
+.star-icon::before{
+    content: "\2606";
 }
 
 body > #container > #informacoes > #descricao > .botoes{
     display: flex;
     gap: 10px;
+    order: 3;
 }
 
 body > #container > #informacoes > #descricao > .botoes > .design-btn{
     padding: 10px 20px;
-    font-size: 1em;
+    font-size: .7em;
     cursor: pointer;
     color: white;
     font-family: 'Loki-regular';
@@ -106,7 +136,15 @@ body > #container > #informacoes > #descricao > .botoes > #btn-1{
     background-color: rgb(14, 98, 207);
 }
 
+body > #container > #informacoes > #descricao > .botoes > #btn-1:hover{
+    background-color: rgba(18, 90, 185, 0.952);
+}
+
 body > #container > #informacoes > #descricao > .botoes > #btn-2{
     background-color: rgba(0, 0, 0, 0.815);
     outline: 1px solid white;
+}
+
+body > #container > #informacoes > #descricao > .botoes > #btn-2:hover{
+    background-color: rgb(44, 44, 44);
 }

@@ -1,0 +1,28 @@
+@media  (max-width: 800px) {
+
+    body > #container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    body > #container > #titulo{
+        font-size: 4em;
+    }
+
+    body > #container > #informacoes > #capa{
+        display: none;
+    }
+
+    body > #container > #informacoes > #descricao > .caracter{
+        order: 1;
+    }
+
+    body > #container > #informacoes > #descricao > .botoes{
+        order: 2;
+    }
+
+    body > #container > #informacoes > #descricao > #texto{
+        order: 3;
+    }
+}
