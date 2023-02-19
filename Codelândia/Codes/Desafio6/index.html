@@ -22,11 +22,11 @@
                         <p>51min</p>
                     </div>
                     <ul id="avaliacao">
-                        <li class="star-icon"></li>
-                        <li class="star-icon"></li>
-                        <li class="star-icon"></li>
-                        <li class="star-icon"></li>
-                        <li class="star-icon"></li>
+                        <li class="star-icon" atr-personalizado = "1"></li>
+                        <li class="star-icon" atr-personalizado = "2"></li>
+                        <li class="star-icon" atr-personalizado = "3"></li>
+                        <li class="star-icon" atr-personalizado = "4"></li>
+                        <li class="star-icon" atr-personalizado = "5"></li>
                     </ul>
                     <p>2021</p>
                 </div>
@@ -40,5 +40,19 @@
             </div>
         </section>
     </section>
+
+    <script>
+        const stars = document.querySelectorAll('.star-icon');
+
+        document.addEventListener('click', function(e){
+            var classStar = e.target.classList;
+            if(!classStar.constains('ativo')){
+                stars.forEach(function(star){
+                    star.classList.remove('ativo')
+                });
+                classStar.add('ativo');
+            }
+        });
+    </script>
 </body>
 </html>

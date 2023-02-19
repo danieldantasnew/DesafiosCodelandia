@@ -110,10 +110,23 @@ body > #container > #informacoes > #descricao > .caracter > #avaliacao{
 body > #container > #informacoes > #descricao > .caracter > #avaliacao > .star-icon{
     color: #ffe500;
     cursor: pointer;
+    width: 30px;
 }
 
 .star-icon::before{
-    content: "\2606";
+    content: "\2605"; /*cheio*/
+}
+
+.star-icon.ativo ~ .star-icon::before{
+    content: "\2606"; /*vazio*/
+}
+
+#avaliacao:hover .star-icon::before{
+    content: "\2605"; /*cheio*/
+}
+
+.star-icon:hover ~ .star-icon::before{
+    content: "\2606"; /*vazio*/
 }
 
 body > #container > #informacoes > #descricao > .botoes{
