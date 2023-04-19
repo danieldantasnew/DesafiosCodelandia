@@ -29,14 +29,14 @@ body{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
+    height: 100vh;
     width: 100%;
 }
 
 #container{
-    background-color: rgba(0, 0, 0, 0.623);
-    height: 100vh;
-    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.63);
+    height: 100%;
+    width: 100%;
     font-family: 'Loki-bold';
     color: white;
     text-align: center;
