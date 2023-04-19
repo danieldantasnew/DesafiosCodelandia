@@ -1,28 +1,57 @@
 @media  (max-width: 800px) {
 
     body > #container{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: flex-start;
+        /* verificar como mexer nos itens individualmente para deixar a descriçção como flex-end e o titulo como flex-start, mudar a ordem individual dos itens */
     }
 
-    body > #container > #titulo{
+    .container-texto h1{
+        padding-top: 10px;
+        font-size: 1.2em;
+    }
+
+    #titulo{
         font-size: 4em;
     }
 
-    body > #container > #informacoes > #capa{
+    #capa{
         display: none;
     }
 
-    body > #container > #informacoes > #descricao > .caracter{
+    #informacoes{
+        margin: 0;
+        padding: 0;
+    }
+
+    #descricao{
+        height: 437px;
+    }
+
+    .caracter{
+        margin: auto;
+        gap: 10px;
+        justify-items: center;
+    }
+
+    .separa{
+        width: 100%;
+        align-items: center;
+        background-color: rgb(39, 35, 35);
+        border-radius: 30px 30px 0px 0px;
+    }
+    .botoes{
+        margin-top: 2em;
         order: 1;
     }
 
-    body > #container > #informacoes > #descricao > .botoes{
+    #texto{
         order: 2;
-    }
-
-    body > #container > #informacoes > #descricao > #texto{
-        order: 3;
+        margin: 0 2em 1em 2em;
+        padding-top: 1.2em;
+        border-top: 1px solid rgb(85, 81, 81);
+        max-width: 800px;
     }
 }
