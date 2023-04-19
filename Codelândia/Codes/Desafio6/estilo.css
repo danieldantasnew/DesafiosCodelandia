@@ -130,18 +130,18 @@ body{
 
 .botoes{
     display: flex;
-    gap: 10px;
+    gap: 1em;
     order: 3;
 }
 
 .design-btn{
-    padding: 10px 20px;
+    padding: 15px 20px;
     font-size: .7em;
     cursor: pointer;
     color: white;
     font-family: 'Loki-regular';
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 #btn-1{
