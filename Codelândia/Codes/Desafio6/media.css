@@ -4,7 +4,8 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
-        /* verificar como mexer nos itens individualmente para deixar a descriçção como flex-end e o titulo como flex-start, mudar a ordem individual dos itens */
+        /* verificar como mexer nos itens individualmente para deixar a descriçção como flex-end e o titulo como flex-start, mudar a ordem individual dos itens 
+        Achei, é só usar Align SELF ou Justify SELF*/
     }
 
     .container-texto h1{

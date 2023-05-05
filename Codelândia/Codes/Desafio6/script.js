@@ -32,13 +32,12 @@ function layoutMobile(){
         const elementoPai = document.querySelector('#descricao');
 
         elementoPai.insertBefore(linhaTexto, divisao1);
-
 }
-
 
 function tamanhoTela(){
     //verifica qual o tamanho inicial da tela para alterar o layout ou não, se for igual ou maior que 801 altera para o layout desktop senão, não será necessário alterar pois ficará já no modo mobile, visto que esse é o HTML padrão.
-    if(window.innerWidth >= 701){
+    let boolean = window.matchMedia('(min-width: 700px)').matches
+    if(boolean){
         layoutDesktop();
     }
 }
@@ -47,7 +46,9 @@ tamanhoTela();
 
 //window.onresize é ativado sempre que o tamanho da tela é alterada
 window.onresize = () =>{
-    if(window.innerWidth >= 701){
+
+    let boolean = window.matchMedia('(min-width: 700px)').matches
+    if(boolean){
         layoutDesktop();
     }
     else{
