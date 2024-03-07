@@ -1,0 +1,47 @@
+footer {
+  background-color: var(--main-color);
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+}
+
+#footerContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+#organizeInfoFooter {
+  display: flex;
+  gap: 9rem;
+  margin-top: 1rem;
+  color: var(--secundary-color-1);
+}
+
+#organizeInfoFooter a {
+  color: var(--secundary-color-1);
+  text-decoration: none;
+  font-weight: 300;
+}
+
+#brandFooter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.organizeSubInfo {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.organizeSubInfo h3 {
+  margin-bottom: .5rem;
+  font-weight: 500;
+}
+
+.organizeSubInfo a, p {
+  font-weight: 300;
+  font-size: .95rem;
+}
