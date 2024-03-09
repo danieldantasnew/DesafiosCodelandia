@@ -21,15 +21,23 @@
     </section>
   </header>
   <main>
-    <section class="main_Content">
-      <section class="logo">
-        <img src="./image/wallpaper.png" alt="bg-apresentação">
-        <img src="./image/logo-fifa-world-cup.svg" alt="Logo Fifa Qatar">
+    <section class="logoPresentation">
+      <img src="./image/wallpaper.png" alt="bg-apresentação">
+      <img src="./image/logo-fifa-world-cup.svg" alt="Logo Fifa Qatar">
+    </section>
+    <section class="main_Content animationLeft">
+      <section >
+        <h1>GRUPOS</h1>
+        <section class="groups"></section>
+        <div id="controls">
+          <div data-control="prev"><img src="./image/controls/arrow-right.svg" alt="arrow-prev"></div>
+          <div data-control="next"><img src="./image/controls/arrow-right.svg" alt="arrow-next"></div>
+        </div>
       </section>
-      <section class="groups">
-      
-      </section>
-      <section class="next-games">
+      <div id="division"></div>
+      <section>
+        <h1>JOGOS ENCERRADOS</h1>
+        <section data-games class="end-games"></section>
       </section>
     </section>
   </main>
@@ -62,5 +70,6 @@
        </div>
     </section>
   </footer>
+  <script type="module" src="dist/script.js"></script>
 </body>
 </html>

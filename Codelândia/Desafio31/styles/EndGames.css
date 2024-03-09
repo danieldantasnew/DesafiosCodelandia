@@ -1,0 +1,60 @@
+#division {
+  background-color: var(--secundary-color-2);
+  height: 2px;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.end-games {
+  margin: 3rem 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.matches {
+  background-color: var(--secundary-color-2);
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.matches  p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.infoMatch {
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  margin-bottom: 1rem;
+}
+
+.scoreBoard {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.scoreBoard img {
+  height: 40px;
+  width: 60px;
+  object-fit: cover;
+} 
+
+.scoreBoard div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.country {
+  gap: .5rem !important;
+}

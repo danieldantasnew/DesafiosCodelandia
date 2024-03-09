@@ -1,0 +1,32 @@
+.logoPresentation {
+  max-height: 330px;
+  display: grid;
+  grid-template-rows: 100%;
+  position: relative;
+}
+
+.logoPresentation::after {
+  content: '';
+  grid-area: 1/1;
+  height: 100%;
+  width: 100%;
+  background-color: #8d1b3db2;
+}
+
+.logoPresentation img {
+  grid-area: 1/1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.logoPresentation img:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 240px;
+  max-width: 240px;
+  object-fit: contain;
+}
