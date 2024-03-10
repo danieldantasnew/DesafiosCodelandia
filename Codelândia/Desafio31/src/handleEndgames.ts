@@ -1,3 +1,5 @@
+import { stringToDate } from "./stringToDate.js";
+
 const caminho: string = "./image/flags/";
 const flagsCountries: Record<string, string> = {
   "QAT": `${caminho}Qatar.svg`,
@@ -60,7 +62,35 @@ export interface Teams {
   away_team: AwayTeam;
 }
 
-export function handleEndgames(data: Teams[]) {
+export interface newTeams {
+  id: number;
+  stadium: string;
+  home_team_country: string;
+  away_team_country: string;
+  datetime: Date;
+  winner: string;
+  winner_code: string;
+  home_team: HomeTeam
+  away_team: AwayTeam;
+}
+
+export function normalizateMacthes(data: Teams[]): newTeams[] {
+  return data.map((item) => {
+    return {
+      id: item.id,
+      stadium: item.venue,
+      home_team_country: item.home_team_country,
+      away_team_country: item.away_team_country,
+      datetime: stringToDate(item.datetime),
+      winner: item.winner,
+      winner_code: item.winner_code,
+      home_team: item.home_team,
+      away_team: item.away_team,
+    }
+  })
+}
+
+export function handleEndgames(data: newTeams[]) {
   const games = document.querySelector<HTMLElement>('[data-games]');
   
   if(games) {
@@ -68,25 +98,36 @@ export function handleEndgames(data: Teams[]) {
     `
       <div class="matches">
         <div class="infoMatch">
-          <p>${game.venue}</p>
-          <p>${game.datetime}</p>
-          <p></p>
+          <p class="stadium">${game.stadium}</p>
+          <p>
+            ${
+              game.datetime.getDate() >= 0 && game.datetime.getDate() <= 9 ?
+              `0${game.datetime.getDate()}` :
+              `${game.datetime.getDate()}`
+            }/${game.datetime.getMonth() + 1}/${game.datetime.getFullYear()}
+          </p>
+          <p>${game.datetime.getHours()}:${
+            game.datetime.getMinutes() >= 0 && game.datetime.getMinutes() <= 9 ?
+            `0${game.datetime.getMinutes()}`:
+            `${game.datetime.getMinutes()}` 
+          }
+          </p>
         </div>
         <div class="scoreBoard">
           <div class="country">
             <img src=${flagsCountries[game.home_team_country]} alt="Flag of Country" >
             <p>${game.home_team.name}</p>
           </div>
-          <div>
+          <div class="infoScore">
             <p>${game.home_team.goals}</p>
-            ${(game.home_team.penalties && game.away_team.penalties)? `<p>(${game.home_team.penalties})</p>` : ''}
+            ${(game.home_team.penalties && game.away_team.penalties)? `<p class="penalties">(${game.home_team.penalties})</p>` : ''}
             <p>X</p>
-            ${(game.home_team.penalties && game.away_team.penalties)? `<p>(${game.away_team.penalties})</p>` : ''}
+            ${(game.home_team.penalties && game.away_team.penalties)? `<p class="penalties">(${game.away_team.penalties})</p>` : ''}
             <p>${game.away_team.goals}</p>
           </div>
           <div class="country">
-            <img src=${flagsCountries[game.away_team_country]} alt="Flag of Country" >
             <p>${game.away_team.name}</p>
+            <img src=${flagsCountries[game.away_team_country]} alt="Flag of Country" >
            </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import fetchData from "./fetchData.js";
-import { handleEndgames } from "./handleEndgames.js";
+import { handleEndgames, normalizateMacthes } from "./handleEndgames.js";
 import { handleGroups } from "./handleGroups.js";
 import { handleSlides } from "./slidesGroups.js";
 async function dadosApi() {
@@ -9,7 +9,7 @@ async function dadosApi() {
         return;
     handleGroups(data.groups);
     handleSlides();
-    handleEndgames(dataMacthes);
+    handleEndgames(normalizateMacthes(dataMacthes));
 }
 dadosApi();
 //# sourceMappingURL=script.js.map

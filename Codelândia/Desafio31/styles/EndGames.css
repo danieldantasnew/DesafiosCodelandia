@@ -9,7 +9,7 @@
   margin: 3rem 0;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(400px, 800px);
   justify-content: center;
   align-items: center;
   gap: 2rem;
@@ -21,7 +21,7 @@
   grid-template-columns: 1fr;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 1rem 1.5rem 1rem;
   border-radius: 4px;
 }
 
@@ -35,12 +35,39 @@
   justify-content: center;
   gap: .5rem;
   margin-bottom: 1rem;
+  color: var(--main-color);
+}
+
+.infoMatch p {
+  font-size: .8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoMatch p::after {
+  display: inline-block;
+  content: '';
+  width: 6px;
+  height: 6px;
+  background-color: var(--main-color);
+  transform: rotate(-45deg);
+  margin-left: 8px;
+}
+
+.infoMatch p:last-child:after {
+  display: none;
+}
+
+.stadium {
+  color: #797777;
 }
 
 .scoreBoard {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
+  position: relative;
 }
 
 .scoreBoard img {
@@ -57,4 +84,18 @@
 
 .country {
   gap: .5rem !important;
+  color: var(--secundary-color-4);
+}
+
+.infoScore {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--secundary-color-3);
+  font-weight: 700;
+}
+
+.penalties {
+  color: #924141;
 }
