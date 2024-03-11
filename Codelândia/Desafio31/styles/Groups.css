@@ -9,7 +9,7 @@
 
 .group {
   background-color: var(--secundary-color-2);
-  padding: 1rem .7rem;
+  padding: 1.5rem .7rem;
   border-radius: 4px;
   flex-shrink: 0;
   width: calc((100% - 1.4rem) / 2);
