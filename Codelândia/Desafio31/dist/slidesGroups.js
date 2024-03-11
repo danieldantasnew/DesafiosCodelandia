@@ -5,13 +5,13 @@ function handleClick(event) {
         if (event.currentTarget.getAttribute('data-control') === "prev") {
             group.forEach((item) => {
                 const { width } = item.getBoundingClientRect();
-                item.style.transform = `translateX(calc(+${width}px + 2rem))`;
+                item.style.transform = `translateX(calc(+${width}px + 1rem))`;
             });
         }
         else {
             group.forEach((item) => {
                 const { width } = item.getBoundingClientRect();
-                item.style.transform = `translateX(calc(-${width}px - 2rem))`;
+                item.style.transform = `translateX(calc(-${width}px - 1rem))`;
             });
         }
     }

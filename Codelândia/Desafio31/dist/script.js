@@ -3,7 +3,7 @@ import { handleEndgames, normalizateMacthes } from "./handleEndgames.js";
 import { handleGroups } from "./handleGroups.js";
 import { handleSlides } from "./slidesGroups.js";
 async function dadosApi() {
-    const data = await fetchData('https://worldcupjson.net/teams');
+    const data = await fetchData('./src/dataFirstStage/dataFirstStage.json');
     const dataMacthes = await fetchData('https://worldcupjson.net/matches');
     if (!data || !dataMacthes)
         return;

@@ -9,7 +9,7 @@
   margin: 3rem 0;
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(400px, 800px);
+  grid-template-columns: minmax(400px, 840px);
   justify-content: center;
   align-items: center;
   gap: 2rem;

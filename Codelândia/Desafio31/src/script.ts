@@ -7,7 +7,7 @@ import { handleSlides } from "./slidesGroups.js";
 
 
 async function dadosApi() {
-  const data = await fetchData<Groups>('https://worldcupjson.net/teams');
+  const data = await fetchData<Groups>('./src/dataFirstStage/dataFirstStage.json');
   const dataMacthes = await fetchData<Teams[]>('https://worldcupjson.net/matches');
   if (!data || !dataMacthes) return;
 
