@@ -1,3 +1,11 @@
+.contentGroups {
+  padding: 1rem;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
 .groups {
   margin-top: 3rem;
   width: 100%;
@@ -19,6 +27,7 @@
   gap: .5rem;
   font-size: .8rem;
 }
+
 
 .group h2, thead th{
   font-weight: 500;
@@ -100,4 +109,14 @@ tbody tr:nth-child(-n+2)::before {
 
 #controls div img {
   height: 24px;
+}
+
+@media (max-width: 890px) {
+  .groups {
+    padding: 1rem;
+  }
+
+  .group {
+    width: 100%;
+  }
 }
