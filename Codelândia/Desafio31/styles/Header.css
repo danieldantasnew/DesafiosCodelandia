@@ -31,3 +31,84 @@ header {
   transition: .2s;
   color: var(--main-color);
 }
+
+.menuBurguer {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
+.modal {
+  display: none;
+}
+
+@media (max-width: 590px) {
+  .navigation {
+    display: none;
+  }
+
+  .menuBurguer {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    background-color: var(--main-color);
+    z-index: 1000;
+    right: 0;
+    top: 0;
+    width: 0;
+    opacity: 0;
+    animation: animationMenuMobile .3s  ease-in-out forwards;
+  }
+
+  @keyframes animationMenuMobile {
+    to {
+      opacity: 1;
+      width: 40vw;
+    }
+  }
+
+  .menu.active .navigation {
+    display: block;
+  }
+
+  .imgCloseMenu {
+    position: absolute;
+    right: .5rem;
+    top: 1rem;
+    cursor: pointer;
+  }
+
+  .menu.active .navigation ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    padding-left: 1rem;
+  }
+
+  .menu.active .navigation ul li a {
+    color: var(--secundary-color-1);
+  }
+
+  .menu.active .navigation ul li a:hover {
+    color: #d6d6d6;
+  }
+
+  .modal.active {
+    display: block;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,.1);
+    z-index: 999;
+    top: 0;
+    left: 0;
+  }
+}

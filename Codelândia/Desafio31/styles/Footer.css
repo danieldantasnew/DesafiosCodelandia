@@ -45,3 +45,19 @@ footer {
   font-weight: 300;
   font-size: .95rem;
 }
+
+@media (max-width: 590px) {
+  footer {
+    height: auto;
+    width: 100%;
+  }
+
+  #organizeInfoFooter {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  #brandFooter {
+    margin-top: 2rem;
+  }
+}

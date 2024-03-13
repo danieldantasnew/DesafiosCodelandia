@@ -9,7 +9,7 @@
   content: '';
   grid-area: 1/1;
   height: 100%;
-  width: 100%;
+  /* width: 100%; */
   background-color: #8d1b3db2;
 }
 

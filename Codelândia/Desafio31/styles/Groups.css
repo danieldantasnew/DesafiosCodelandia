@@ -113,10 +113,26 @@ tbody tr:nth-child(-n+2)::before {
 
 @media (max-width: 890px) {
   .groups {
-    padding: 1rem;
+    padding: .5rem;
   }
 
   .group {
+    font-size: .65rem;
     width: 100%;
+  }
+
+  .group table img {
+    height: 12px;
+    width: 12px !important;
+  }
+
+  .group thead tr, .group tr {
+    display: grid;
+    grid-template-columns: 1fr repeat(8, 23px);
+  }
+
+  .flag-name {
+    font-size: .75rem;
+    gap: 4px;
   }
 }

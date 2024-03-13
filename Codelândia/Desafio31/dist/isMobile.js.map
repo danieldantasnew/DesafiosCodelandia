@@ -1,0 +1,1 @@
+{"version":3,"file":"isMobile.js","sourceRoot":"","sources":["../src/isMobile.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,UAAU,QAAQ,CAAC,KAAa;IAC5C,MAAM,MAAM,GAAG,MAAM,CAAC,UAAU,CAAC,eAAe,KAAK,GAAG,CAAC,CAAC,OAAO,CAAA;IACjE,OAAO,MAAM,CAAC;AAChB,CAAC"}

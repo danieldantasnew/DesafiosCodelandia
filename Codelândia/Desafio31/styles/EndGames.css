@@ -9,10 +9,11 @@
   margin: 3rem 0;
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(400px, 840px);
+  grid-template-columns: minmax(300px, 840px);
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  padding: .5rem;
 }
 
 .matches {
@@ -98,4 +99,39 @@
 
 .penalties {
   color: #924141;
+}
+
+@media (min-width: 360px) and (max-width: 590px){
+  .scoreBoard img { 
+    display: block;
+    height: 15px;
+    width: 20px;
+    object-fit: cover;
+  }
+
+  .matches  p {
+    font-size: .65rem;
+  }
+
+  .infoMatch p {
+    font-size: .7rem;
+  }
+}
+
+@media (max-width: 359px) {
+  .end-games {
+    grid-template-columns: minmax(0,1fr);
+  }
+
+  .scoreBoard img {
+    display: none;
+  } 
+
+  .matches  p {
+    font-size: .8rem;
+  }
+
+  .infoMatch p {
+    font-size: .7rem;
+  }
 }

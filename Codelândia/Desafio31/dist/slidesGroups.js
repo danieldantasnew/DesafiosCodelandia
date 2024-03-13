@@ -1,8 +1,9 @@
+import isMobile from "./isMobile.js";
 let index = 0;
 function handleClick(event) {
     const groups = document.querySelector('.groups');
     const group = document.querySelectorAll('.group');
-    const mobile = window.matchMedia("(max-width: 800px)").matches;
+    const mobile = isMobile("800px");
     if (event.currentTarget instanceof HTMLElement && groups && group) {
         if (event.currentTarget.getAttribute('data-control') === "prev") {
             index - 1 < 0 ? index = 0 : index -= 1;
