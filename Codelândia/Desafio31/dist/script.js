@@ -16,8 +16,9 @@ async function dadosApi() {
     const dataMacthes = await fetchData('https://worldcupjson.net/matches');
     if (!data || !dataMacthes)
         return;
+    const lastThreeMatches = normalizateMacthes(dataMacthes).slice(-3);
     handleGroups(data.groups);
-    handleEndgames(normalizateMacthes(dataMacthes));
+    handleEndgames(lastThreeMatches);
 }
 function init() {
     const btnMenu = document.querySelector("[data-menuHam]");

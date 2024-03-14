@@ -1,3 +1,11 @@
+.matchesSection {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
 #division {
   background-color: var(--secundary-color-2);
   height: 2px;
@@ -99,6 +107,26 @@
 
 .penalties {
   color: #924141;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: transparent;
+  background-color: var(--submain-color-1);
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.btn a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+  transition: .3s;
+  box-shadow: 0 0 0 1px #924141, 0 0 0 2px var(--main-color);
 }
 
 @media (min-width: 360px) and (max-width: 590px){
