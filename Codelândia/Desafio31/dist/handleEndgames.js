@@ -49,8 +49,7 @@ export function normalizateMacthes(data) {
         };
     });
 }
-export function handleEndgames(data) {
-    const games = document.querySelector('[data-games]');
+export function handleEndgames(data, games) {
     if (games) {
         data.map((game) => games.innerHTML +=
             `

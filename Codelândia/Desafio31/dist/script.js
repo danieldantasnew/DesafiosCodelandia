@@ -16,9 +16,12 @@ async function dadosApi() {
     const dataMacthes = await fetchData('https://worldcupjson.net/matches');
     if (!data || !dataMacthes)
         return;
-    const lastThreeMatches = normalizateMacthes(dataMacthes).slice(-3);
     handleGroups(data.groups);
-    handleEndgames(lastThreeMatches);
+    const lastThreeMatches = normalizateMacthes(dataMacthes).slice(-3);
+    const games = document.querySelector('[data-games]');
+    const gamesMacthes = document.querySelector('[data-macthes]');
+    games ? handleEndgames(lastThreeMatches, games) : '';
+    gamesMacthes ? handleEndgames(normalizateMacthes(dataMacthes), gamesMacthes) : '';
 }
 function init() {
     const btnMenu = document.querySelector("[data-menuHam]");

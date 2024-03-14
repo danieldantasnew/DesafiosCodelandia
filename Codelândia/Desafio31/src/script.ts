@@ -20,9 +20,13 @@ async function dadosApi() {
   const dataMacthes = await fetchData<Teams[]>('https://worldcupjson.net/matches');
   if (!data || !dataMacthes) return;
 
-  const lastThreeMatches = normalizateMacthes(dataMacthes).slice(-3);
   handleGroups(data.groups);
-  handleEndgames(lastThreeMatches);
+  
+  const lastThreeMatches = normalizateMacthes(dataMacthes).slice(-3);
+  const games = document.querySelector<HTMLElement>('[data-games]');
+  const gamesMacthes = document.querySelector<HTMLElement>('[data-macthes]');
+  games? handleEndgames(lastThreeMatches, games) : '';
+  gamesMacthes? handleEndgames(normalizateMacthes(dataMacthes), gamesMacthes) : '';
 }
 
 function init() {

@@ -32,6 +32,39 @@
   align-items: center;
   padding: 1rem 1rem 1.5rem 1rem;
   border-radius: 4px;
+  position: relative;
+}
+
+.matches:last-child::after {
+  content: 'FINAL';
+  display: inline-block;
+  width: auto;
+  height: auto;
+  padding: 8px 16px;
+  position: absolute;
+  right: -8px;
+  top: -12px;
+  font-size: .8rem;
+  background-color: rgba(255, 217, 0, 0.87);
+  color: rgb(119, 101, 0);
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.matches:nth-last-child(2)::after {
+  content: '3RD PLACE';
+  display: inline-block;
+  width: auto;
+  height: auto;
+  padding: 8px 16px;
+  position: absolute;
+  right: -8px;
+  top: -12px;
+  font-size: .8rem;
+  background-color: #cd7f32;
+  color: #fff3e3;
+  font-weight: 600;
+  border-radius: 4px;
 }
 
 .matches  p {
@@ -144,6 +177,20 @@
   .infoMatch p {
     font-size: .7rem;
   }
+
+  .matches:last-child::after {
+    padding: 4px 8px;
+    font-size: .5rem;
+    right: -4px;
+    top: -8px;
+  }
+  
+  .matches:nth-last-child(2)::after {
+    padding: 4px 8px;
+    font-size: .5rem;
+    right: -4px;
+    top: -8px;
+  }
 }
 
 @media (max-width: 359px) {
@@ -161,5 +208,19 @@
 
   .infoMatch p {
     font-size: .7rem;
+  }
+
+  .matches:last-child::after {
+    padding: 4px 8px;
+    font-size: .4rem;
+    right: -4px;
+    top: -8px;
+  }
+  
+  .matches:nth-last-child(2)::after {
+    padding: 4px 8px;
+    font-size: .4rem;
+    right: -4px;
+    top: -8px;
   }
 }

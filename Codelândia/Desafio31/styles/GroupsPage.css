@@ -1,0 +1,36 @@
+main {
+  margin-bottom: 4rem;
+}
+
+.groups {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.group {
+  width: 100%;
+}
+
+
+@media (max-width: 720px) {
+  .groups {
+    grid-template-columns: minmax(200px, 600px);
+  }
+}
+
+@media (max-width: 320px) {
+  .groups table {
+    overflow-x: auto;
+  }
+  .groups table {
+    font-size: .5rem;
+  }
+
+  .group table img {
+    display: none;
+  }
+
+  .flag-name {
+    font-size: .6rem;
+  }
+}

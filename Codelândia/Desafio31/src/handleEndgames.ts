@@ -90,9 +90,7 @@ export function normalizateMacthes(data: Teams[]): newTeams[] {
   })
 }
 
-export function handleEndgames(data: newTeams[]) {
-  const games = document.querySelector<HTMLElement>('[data-games]');
-  
+export function handleEndgames(data: newTeams[], games: HTMLElement) {
   if(games) {
     data.map((game) => games.innerHTML += 
     `
