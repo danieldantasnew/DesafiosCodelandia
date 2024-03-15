@@ -1,3 +1,7 @@
 .worldChampions {
-  margin-top: 3rem;
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #74ACDF;
 }

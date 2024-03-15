@@ -35,7 +35,7 @@
   position: relative;
 }
 
-.matches:last-child::after {
+/* .matches:last-child::after {
   content: 'FINAL';
   display: inline-block;
   width: auto;
@@ -52,7 +52,7 @@
 }
 
 .matches:nth-last-child(2)::after {
-  content: '3RD PLACE';
+  content: '3° LUGAR';
   display: inline-block;
   width: auto;
   height: auto;
@@ -65,7 +65,7 @@
   color: #fff3e3;
   font-weight: 600;
   border-radius: 4px;
-}
+} */
 
 .matches  p {
   font-size: 1rem;
@@ -85,6 +85,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  white-space: nowrap;
 }
 
 .infoMatch p::after {
@@ -103,6 +104,12 @@
 
 .stadium {
   color: #797777;
+  font-size: 1rem;
+}
+
+.stage {
+  color: #797777;
+  font-size: 1rem;
 }
 
 .scoreBoard {
@@ -175,10 +182,15 @@
   }
 
   .infoMatch p {
-    font-size: .7rem;
+    font-size: .56rem;
   }
 
-  .matches:last-child::after {
+  .infoMatch p::after {
+    width: 4px;
+    height: 4px;
+  }
+
+  /* .matches:last-child::after {
     padding: 4px 8px;
     font-size: .5rem;
     right: -4px;
@@ -190,7 +202,7 @@
     font-size: .5rem;
     right: -4px;
     top: -8px;
-  }
+  } */
 }
 
 @media (max-width: 359px) {
@@ -207,10 +219,15 @@
   }
 
   .infoMatch p {
-    font-size: .7rem;
+    font-size: .47rem;
   }
 
-  .matches:last-child::after {
+  .infoMatch p::after {
+    width: 4px;
+    height: 4px;
+  }
+
+  /* .matches:last-child::after {
     padding: 4px 8px;
     font-size: .4rem;
     right: -4px;
@@ -222,5 +239,5 @@
     font-size: .4rem;
     right: -4px;
     top: -8px;
-  }
+  } */
 }

@@ -34,6 +34,14 @@ const flagsCountries = {
     "POR": `${caminho}Portugal.svg`,
     "KOR": `${caminho}South_Korea.png`,
 };
+const stages = {
+    "First stage": "Fase de grupos",
+    "Round of 16": "Oitavas de final",
+    "Quarter-final": "Quartas de final",
+    "Semi-final": "Semifinal",
+    "Play-off for third place": "Disputa de 3° lugar",
+    "Final": "Final"
+};
 export function normalizateMacthes(data) {
     return data.map((item) => {
         return {
@@ -46,6 +54,7 @@ export function normalizateMacthes(data) {
             winner_code: item.winner_code,
             home_team: item.home_team,
             away_team: item.away_team,
+            stage_name: item.stage_name,
         };
     });
 }
@@ -65,6 +74,7 @@ export function handleEndgames(data, games) {
                 `0${game.datetime.getMinutes()}` :
                 `${game.datetime.getMinutes()}`}
           </p>
+          <p class="stage">${stages[game.stage_name]}</p>
         </div>
         <div class="scoreBoard">
           <div class="country">

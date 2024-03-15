@@ -6,6 +6,11 @@
 @import url('./styles/EndGames.css');
 @import url('./styles/WorldChampions.css');
 
+@font-face {
+  font-family: "QatarMedium";
+  src: url('./font/Qatar2022Arabic-Medium.otf') format('opentype');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +25,7 @@
   --secundary-color-3: #3c3939;
   --secundary-color-4: #0e131e;
   --main-font: "Inter", sans-serif;
+  --font-titles-medium: "QatarMedium";
   font-family: var(--main-font);
 }
 
@@ -58,6 +64,7 @@ main {
   text-align: center;
   margin-top: 3rem;
   font-weight: 500;
+  font-family: var(--font-titles-medium);
 }
 
 .animationLeft {

@@ -35,6 +35,14 @@ const flagsCountries: Record<string, string> = {
   "POR": `${caminho}Portugal.svg`,
   "KOR": `${caminho}South_Korea.png`,
 }
+const stages: Record<string,string> = {
+  "First stage": "Fase de grupos",
+  "Round of 16": "Oitavas de final",
+  "Quarter-final": "Quartas de final",
+  "Semi-final": "Semifinal",
+  "Play-off for third place": "Disputa de 3° lugar",
+  "Final": "Final"
+}
 
 type HomeTeam = {
   country: string,
@@ -50,6 +58,14 @@ type AwayTeam = {
   penalties: number;
 }
 
+type Stages = 
+"First stage" |
+"Round of 16" |
+"Quarter-final" |
+"Semi-final" |
+"Play-off for third place" |
+"Final"
+
 export interface Teams {
   id: number;
   venue: string;
@@ -60,6 +76,7 @@ export interface Teams {
   winner_code: string;
   home_team: HomeTeam
   away_team: AwayTeam;
+  stage_name: Stages;
 }
 
 export interface newTeams {
@@ -72,6 +89,7 @@ export interface newTeams {
   winner_code: string;
   home_team: HomeTeam
   away_team: AwayTeam;
+  stage_name: Stages;
 }
 
 export function normalizateMacthes(data: Teams[]): newTeams[] {
@@ -86,6 +104,7 @@ export function normalizateMacthes(data: Teams[]): newTeams[] {
       winner_code: item.winner_code,
       home_team: item.home_team,
       away_team: item.away_team,
+      stage_name: item.stage_name,
     }
   })
 }
@@ -110,6 +129,7 @@ export function handleEndgames(data: newTeams[], games: HTMLElement) {
             `${game.datetime.getMinutes()}` 
           }
           </p>
+          <p class="stage">${stages[game.stage_name]}</p>
         </div>
         <div class="scoreBoard">
           <div class="country">
