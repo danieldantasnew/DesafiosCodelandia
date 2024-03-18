@@ -4,6 +4,7 @@ import { handleGroups } from "./handleGroups.js";
 import { handleSlides } from "./slidesGroups.js";
 import handleMenu from "./handleMenu.js";
 import isMobile from "./isMobile.js";
+import { handleChampion } from "./handleChampion.js";
 function mobileActive() {
     const mobile = isMobile("590px");
     const menu = document.querySelector('[data-menu]');
@@ -32,6 +33,7 @@ function init() {
     modal?.addEventListener('click', handleMenu);
     handleSlides();
     dadosApi();
+    handleChampion();
     window.addEventListener("resize", mobileActive);
 }
 init();
