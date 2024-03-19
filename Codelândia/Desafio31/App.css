@@ -68,7 +68,7 @@ main {
 }
 
 .animationLeft {
-  animation: animationLeft .8s forwards;
+  animation: animationLeft .8s ease-in-out forwards;
 }
 
 @keyframes animationLeft {
