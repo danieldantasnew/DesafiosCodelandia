@@ -1,7 +1,7 @@
 import { stringToDate } from "./stringToDate.js";
 
 const caminho: string = "./image/flags/";
-const flagsCountries: Record<string, string> = {
+export const flagsCountries: Record<string, string> = {
   "QAT": `${caminho}Qatar.svg`,
   "NED": `.${caminho}Netherlands.svg`,
   "SEN": `${caminho}Senegal.svg`,
@@ -35,7 +35,7 @@ const flagsCountries: Record<string, string> = {
   "POR": `${caminho}Portugal.svg`,
   "KOR": `${caminho}South_Korea.png`,
 }
-const stages: Record<string,string> = {
+export const stages: Record<string,string> = {
   "First stage": "Fase de grupos",
   "Round of 16": "Oitavas de final",
   "Quarter-final": "Quartas de final",
@@ -106,7 +106,7 @@ export function normalizateMacthes(data: Teams[]): newTeams[] {
       away_team: item.away_team,
       stage_name: item.stage_name,
     }
-  })
+  });
 }
 
 export function handleEndgames(data: newTeams[], games: HTMLElement) {

@@ -1,6 +1,6 @@
 import { stringToDate } from "./stringToDate.js";
 const caminho = "./image/flags/";
-const flagsCountries = {
+export const flagsCountries = {
     "QAT": `${caminho}Qatar.svg`,
     "NED": `.${caminho}Netherlands.svg`,
     "SEN": `${caminho}Senegal.svg`,
@@ -34,7 +34,7 @@ const flagsCountries = {
     "POR": `${caminho}Portugal.svg`,
     "KOR": `${caminho}South_Korea.png`,
 };
-const stages = {
+export const stages = {
     "First stage": "Fase de grupos",
     "Round of 16": "Oitavas de final",
     "Quarter-final": "Quartas de final",

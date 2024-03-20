@@ -1,0 +1,32 @@
+.controllers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 840px;
+}
+
+.controllers span:first-child {
+  transform: rotate(180deg);
+  padding-top: 7px;
+}
+
+.controllers span {
+  cursor: pointer;
+}
+
+.controllers h1 {
+  margin-top: 0 !important;
+}
+
+.groups.stages {
+  display: flex;
+  flex-direction: column;
+}
+
+.matches {
+  flex: 1 !important;
+}
+
+

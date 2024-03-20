@@ -1,38 +1,4 @@
-const caminho = "./image/flags/";
-const flagsCountries = {
-    "QAT": `${caminho}Qatar.svg`,
-    "NED": `.${caminho}Netherlands.svg`,
-    "SEN": `${caminho}Senegal.svg`,
-    "ECU": `${caminho}Ecuador.svg`,
-    "ENG": `${caminho}England.svg`,
-    "WAL": `${caminho}Wales.svg`,
-    "IRN": `${caminho}Iran.svg`,
-    "USA": `${caminho}USA.svg`,
-    "MEX": `${caminho}Mexico.svg`,
-    "POL": `${caminho}Poland.svg`,
-    "ARG": `${caminho}Argentina.svg`,
-    "KSA": `${caminho}SaudiArabia.svg`,
-    "TUN": `${caminho}Tunisia.png`,
-    "AUS": `${caminho}Australia.png`,
-    "DEN": `${caminho}Denmark.png`,
-    "FRA": `${caminho}France.png`,
-    "ESP": `${caminho}Spain.png`,
-    "JPN": `${caminho}Japan.svg`,
-    "CRC": `${caminho}Costa_Rica.png`,
-    "GER": `${caminho}Germany.png`,
-    "BEL": `${caminho}Belgium.png`,
-    "CRO": `${caminho}Croatia.png`,
-    "CAN": `${caminho}Canada.png`,
-    "MAR": `${caminho}Morocco.png`,
-    "BRA": `${caminho}Brazil.svg`,
-    "SRB": `${caminho}Serbia.png`,
-    "CMR": `${caminho}Cameroon.png`,
-    "SUI": `${caminho}Switzerland.png`,
-    "GHA": `${caminho}Ghana.png`,
-    "URU": `${caminho}Uruguay.png`,
-    "POR": `${caminho}Portugal.svg`,
-    "KOR": `${caminho}South_Korea.png`,
-};
+import { flagsCountries } from "./handleEndgames.js";
 function teamsByOrder(data) {
     return data
         .sort((teamA, teamB) => teamB.goals_against - teamA.goals_against)
@@ -43,8 +9,14 @@ function teamsByOrder(data) {
         .sort((teamA, teamB) => teamB.wins - teamA.wins)
         .sort((teamA, teamB) => teamB.group_points - teamA.group_points);
 }
-export function handleGroups(arr) {
+export function handleGroups(arr, title, sectionStage) {
     const groups = document.querySelector('.groups');
+    if (title)
+        title.innerText = "FASE DE GRUPOS";
+    if (sectionStage) {
+        sectionStage.innerHTML = '';
+        sectionStage.classList.remove('stages');
+    }
     if (groups instanceof HTMLElement && arr) {
         arr.forEach((data) => {
             let counter = 0;

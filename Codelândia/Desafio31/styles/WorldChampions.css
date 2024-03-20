@@ -22,7 +22,7 @@
   width: 100%;
   opacity: 0;
   transform: translateY(-50%);
-  animation: animationShort .7s ease-in-out forwards;
+  animation: animationShort 3s ease-in-out forwards;
 }
 
 @keyframes animationShort {
@@ -43,7 +43,7 @@
   display: flex;
   height: 100%;
   position: relative;
-  animation: animationLeft .8s ease-in-out forwards;
+  animation: animationLeft 3s ease-in-out forwards;
 }
 
 #info {
@@ -71,6 +71,19 @@
   z-index: 0;
   max-width: 100%;
   max-height: 100%;
+  animation: animationSouthAmerica 3s infinite;
+}
+
+@keyframes animationSouthAmerica {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .75;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .trophies {

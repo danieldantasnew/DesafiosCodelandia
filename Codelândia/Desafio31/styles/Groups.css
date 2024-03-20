@@ -28,7 +28,6 @@
   font-size: .8rem;
 }
 
-
 .group h2, thead th{
   font-weight: 500;
 }
@@ -112,6 +111,10 @@ tbody tr:nth-child(-n+2)::before {
 }
 
 @media (max-width: 890px) {
+  .contentGroups {
+    padding: 0rem;
+  }
+
   .groups {
     padding: .5rem;
   }
