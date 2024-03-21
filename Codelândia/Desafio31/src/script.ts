@@ -22,7 +22,7 @@ function mobileActive() {
 
 async function dadosApi() {
   const data = await fetchData<Groups>('./src/dataFirstStage/dataFirstStage.json');
-  const dataMacthes = await fetchData<Teams[]>('https://worldcupjson.net/matches');
+  const dataMacthes = await fetchData<Teams[]>('./src/dataMatches/matches.json');
   if (!data || !dataMacthes) return;
 
   handleGroups(data.groups);

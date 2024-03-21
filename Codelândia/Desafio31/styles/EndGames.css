@@ -123,10 +123,12 @@
   border: transparent;
   background-color: var(--submain-color-1);
   color: var(--main-color);
+  font-size: .9rem;
   font-weight: 600;
+  text-decoration: none;
 }
 
-.btn a {
+.btn{
   color: var(--main-color);
   text-decoration: none;
 }

@@ -17,7 +17,7 @@ function mobileActive() {
 }
 async function dadosApi() {
     const data = await fetchData('./src/dataFirstStage/dataFirstStage.json');
-    const dataMacthes = await fetchData('https://worldcupjson.net/matches');
+    const dataMacthes = await fetchData('./src/dataMatches/matches.json');
     if (!data || !dataMacthes)
         return;
     handleGroups(data.groups);
