@@ -6,6 +6,7 @@ import handleMenu from "./handleMenu.js";
 import isMobile from "./isMobile.js";
 import { handleChampion } from "./handleChampion.js";
 import { final, playOff, quarterFinal, roundOf16, semiFinal, valueControl } from "./slideStage.js";
+import { handleWatch } from "./watch.js";
 let dataAPI;
 let groupsAPI;
 function mobileActive() {
@@ -23,6 +24,7 @@ async function dadosApi() {
     handleGroups(data.groups);
     dataAPI = normalizateMacthes(dataMacthes);
     groupsAPI = data.groups;
+    handleWatch(normalizateMacthes(dataMacthes));
     const lastThreeMatches = normalizateMacthes(dataMacthes).slice(-4);
     const games = document.querySelector('[data-games]');
     const gamesMacthes = document.querySelector('[data-macthes]');

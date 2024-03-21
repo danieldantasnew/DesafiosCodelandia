@@ -77,6 +77,7 @@ export interface Teams {
   home_team: HomeTeam
   away_team: AwayTeam;
   stage_name: Stages;
+  video: string; 
 }
 
 export interface newTeams {
@@ -90,6 +91,7 @@ export interface newTeams {
   home_team: HomeTeam
   away_team: AwayTeam;
   stage_name: Stages;
+  video: string;
 }
 
 export function normalizateMacthes(data: Teams[]): newTeams[] {
@@ -105,6 +107,7 @@ export function normalizateMacthes(data: Teams[]): newTeams[] {
       home_team: item.home_team,
       away_team: item.away_team,
       stage_name: item.stage_name,
+      video: item.video,
     }
   });
 }
