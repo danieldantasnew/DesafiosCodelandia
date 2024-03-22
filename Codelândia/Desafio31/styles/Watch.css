@@ -27,4 +27,5 @@
 
 .watchMatch.individualPage {
   background-color: var(--secundary-color-1);
+  padding: .5rem;
 }
