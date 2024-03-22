@@ -25,6 +25,7 @@
 }
 
 .matches {
+  cursor: pointer;
   background-color: var(--secundary-color-2);
   display: grid;
   grid-template-columns: 1fr;
@@ -33,6 +34,20 @@
   padding: 1rem 1rem 1.5rem 1rem;
   border-radius: 4px;
   position: relative;
+}
+
+.matches:hover {
+  background-color: #ebebeb;
+  transition: .2s;
+}
+
+.matches.desactivate {
+  cursor: inherit;
+}
+
+.matches.desactivate:hover {
+  background-color: var(--secundary-color-2);
+  transition: none;
 }
 
 .matches  p {

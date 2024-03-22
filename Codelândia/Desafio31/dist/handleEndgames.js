@@ -59,23 +59,33 @@ export function normalizateMacthes(data) {
         };
     });
 }
-export function handleEndgames(data, games) {
-    if (games) {
-        data.map((game) => games.innerHTML +=
-            `
-      <div class="matches">
+function handleClickMatch(event) {
+    if (event.currentTarget instanceof HTMLElement) {
+        window.location.href = `/watchMatch.html?id=${event.currentTarget.id}`;
+    }
+}
+export function loopForMatches(arr) {
+    if (arr instanceof NodeList)
+        arr.forEach((item) => item.addEventListener('click', handleClickMatch));
+}
+export function loopForGames(arr, sectionFather) {
+    return {
+        clearHTML: sectionFather.innerHTML = '',
+        loop: arr.forEach((game) => {
+            sectionFather.innerHTML +=
+                `
+      <div class="matches" id=${game.id - 1}>
         <div class="infoMatch">
           <p class="stadium">${game.stadium}</p>
           <p>
             ${game.datetime.getDate() >= 0 && game.datetime.getDate() <= 9 ?
-                `0${game.datetime.getDate()}` :
-                `${game.datetime.getDate()}`}/${game.datetime.getMonth() + 1}/${game.datetime.getFullYear()}
+                    `0${game.datetime.getDate()}` :
+                    `${game.datetime.getDate()}`}/${game.datetime.getMonth() + 1}/${game.datetime.getFullYear()}
           </p>
           <p>${game.datetime.getHours()}:${game.datetime.getMinutes() >= 0 && game.datetime.getMinutes() <= 9 ?
-                `0${game.datetime.getMinutes()}` :
-                `${game.datetime.getMinutes()}`}
+                    `0${game.datetime.getMinutes()}` :
+                    `${game.datetime.getMinutes()}`}
           </p>
-          <p class="stage">${stages[game.stage_name]}</p>
         </div>
         <div class="scoreBoard">
           <div class="country">
@@ -92,10 +102,17 @@ export function handleEndgames(data, games) {
           <div class="country">
             <p>${game.away_team.name}</p>
             <img src=${flagsCountries[game.away_team_country]} alt="Flag of Country" >
-           </div>
+          </div>
         </div>
       </div>
-    `);
+  `;
+        }),
+        addEvent: loopForMatches(sectionFather.childNodes),
+    };
+}
+export function handleEndgames(data, games) {
+    if (games) {
+        loopForGames(data, games);
     }
 }
 //# sourceMappingURL=handleEndgames.js.map

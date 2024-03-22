@@ -7,6 +7,7 @@ import isMobile from "./isMobile.js";
 import { handleChampion } from "./handleChampion.js";
 import { final, playOff, quarterFinal, roundOf16, semiFinal, valueControl } from "./slideStage.js";
 import { handleWatch } from "./watch.js";
+import { watchMatch } from "./watchMatch.js";
 let dataAPI;
 let groupsAPI;
 function mobileActive() {
@@ -21,15 +22,18 @@ async function dadosApi() {
     const dataMacthes = await fetchData('./src/dataMatches/matches.json');
     if (!data || !dataMacthes)
         return;
-    handleGroups(data.groups);
     dataAPI = normalizateMacthes(dataMacthes);
     groupsAPI = data.groups;
-    handleWatch(normalizateMacthes(dataMacthes));
-    const lastThreeMatches = normalizateMacthes(dataMacthes).slice(-4);
+    const watchMatchElement = document.querySelector("[data-watchMatch]");
+    const lastThreeMatches = dataAPI.slice(-4);
     const games = document.querySelector('[data-games]');
     const gamesMacthes = document.querySelector('[data-macthes]');
+    if (watchMatchElement)
+        watchMatch(dataAPI, watchMatchElement);
     games ? handleEndgames(lastThreeMatches, games) : '';
-    gamesMacthes ? handleEndgames(normalizateMacthes(dataMacthes), gamesMacthes) : '';
+    gamesMacthes ? handleEndgames(dataAPI, gamesMacthes) : '';
+    handleGroups(groupsAPI);
+    handleWatch(normalizateMacthes(dataMacthes));
 }
 export function slideStages() {
     const stages = document.querySelector('[data-stage]');

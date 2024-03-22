@@ -22,3 +22,9 @@
   gap: 4rem;
   border-radius: 4px;
 }
+
+/* For individual page watchMatch */
+
+.watchMatch.individualPage {
+  background-color: var(--secundary-color-1);
+}

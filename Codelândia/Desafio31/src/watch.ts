@@ -6,7 +6,7 @@ export function handleWatch(data: newTeams[]) {
     watchSection.innerHTML += 
       data.map((matchWatch)=> `    
       <div class="watchMatch">
-        <div class="matches">
+        <div class="matches desactivate">
           <div class="infoMatch">
             <p class="stadium">${matchWatch.stadium}</p>
             <p>

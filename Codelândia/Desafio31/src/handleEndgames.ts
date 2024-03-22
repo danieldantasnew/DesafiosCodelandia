@@ -112,11 +112,23 @@ export function normalizateMacthes(data: Teams[]): newTeams[] {
   });
 }
 
-export function handleEndgames(data: newTeams[], games: HTMLElement) {
-  if(games) {
-    data.map((game) => games.innerHTML += 
-    `
-      <div class="matches">
+function handleClickMatch(event: Event): void {
+  if(event.currentTarget instanceof HTMLElement) {
+    window.location.href = `/watchMatch.html?id=${event.currentTarget.id}`
+  }
+}
+
+export function loopForMatches(arr: NodeList) {
+  if(arr instanceof NodeList) arr.forEach((item)=> item.addEventListener('click', handleClickMatch));
+}
+
+export function loopForGames(arr: newTeams[], sectionFather: HTMLElement) {
+  return {
+    clearHTML: sectionFather.innerHTML = '',
+    loop: arr.forEach((game)=> {
+      sectionFather.innerHTML +=
+      `
+      <div class="matches" id=${game.id-1}>
         <div class="infoMatch">
           <p class="stadium">${game.stadium}</p>
           <p>
@@ -132,7 +144,6 @@ export function handleEndgames(data: newTeams[], games: HTMLElement) {
             `${game.datetime.getMinutes()}` 
           }
           </p>
-          <p class="stage">${stages[game.stage_name]}</p>
         </div>
         <div class="scoreBoard">
           <div class="country">
@@ -149,9 +160,16 @@ export function handleEndgames(data: newTeams[], games: HTMLElement) {
           <div class="country">
             <p>${game.away_team.name}</p>
             <img src=${flagsCountries[game.away_team_country]} alt="Flag of Country" >
-           </div>
+          </div>
         </div>
       </div>
-    `);
+  `}),
+  addEvent: loopForMatches(sectionFather.childNodes),
+  }
+}
+
+export function handleEndgames(data: newTeams[], games: HTMLElement): void {
+  if(games) {
+    loopForGames(data, games);
   }
 }
