@@ -4,7 +4,6 @@ export function watchMatch(dataAPI: newTeams[], sectionWatchMatch: HTMLElement) 
   const url = new URLSearchParams(window.location.search);
   const params = Number(url.get('id'));
   let id: number | null = params;
-  console.log(id)
   if(dataAPI && dataAPI[id]) {
     sectionWatchMatch.innerHTML = 
     `

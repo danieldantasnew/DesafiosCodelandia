@@ -66,6 +66,12 @@ type Stages =
 "Play-off for third place" |
 "Final"
 
+type Rounds = 
+"" |
+"1" |
+"2" |
+"3"
+
 export interface Teams {
   id: number;
   venue: string;
@@ -77,6 +83,7 @@ export interface Teams {
   home_team: HomeTeam
   away_team: AwayTeam;
   stage_name: Stages;
+  round: Rounds;
   video: string; 
 }
 
@@ -90,6 +97,7 @@ export interface newTeams {
   winner_code: string;
   home_team: HomeTeam
   away_team: AwayTeam;
+  round: Rounds;
   stage_name: Stages;
   video: string;
 }
@@ -107,6 +115,7 @@ export function normalizateMacthes(data: Teams[]): newTeams[] {
       home_team: item.home_team,
       away_team: item.away_team,
       stage_name: item.stage_name,
+      round: item.round,
       video: item.video,
     }
   });

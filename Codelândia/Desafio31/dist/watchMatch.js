@@ -3,7 +3,6 @@ export function watchMatch(dataAPI, sectionWatchMatch) {
     const url = new URLSearchParams(window.location.search);
     const params = Number(url.get('id'));
     let id = params;
-    console.log(id);
     if (dataAPI && dataAPI[id]) {
         sectionWatchMatch.innerHTML =
             `

@@ -1,15 +1,15 @@
 .contentGroups {
   padding: 1rem;
   width: 100%;
+  max-width: 840px;
   display: grid;
+  gap: 3rem;
   justify-content: center;
   align-items: center;
 }
 
 .groups {
-  margin-top: 3rem;
   width: 100%;
-  max-width: 840px;
   overflow: hidden;
   display: flex;
   gap: 1rem;
@@ -112,7 +112,7 @@ tbody tr:nth-child(-n+2)::before {
 
 @media (max-width: 890px) {
   .contentGroups {
-    padding: 0rem;
+    padding: .5rem;
   }
 
   .groups {

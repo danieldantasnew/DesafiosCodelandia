@@ -1,9 +1,48 @@
 import { loopForGames, newTeams } from "./handleEndgames.js";
-import { slideStages } from "./script.js";
+import { Group, handleGroups } from "./handleGroups.js";
+import { insertRounds } from "./handleSlidesGroupStage.js";
 
 const controllers = document.querySelectorAll('[data-controllers]');
 controllers.forEach((item)=> item.addEventListener("click", controlSlide));
 let control = 0;
+let dataMatch: newTeams[];
+let dataGroup: Group[];
+
+export function dataAPIMatches(data: newTeams[]): void {
+  dataMatch = data;
+}
+
+export function dataAPIGroups(data: Group[]): void {
+  dataGroup = data;
+}
+
+function slideStages() {
+  const stages = document.querySelector<HTMLElement>('[data-stage]');
+  const dataTitle = document.querySelector<HTMLElement>('[data-titleStage]');
+
+  switch (valueControl()) {
+    case 0:
+      stages && dataTitle ? handleGroups(dataGroup, dataTitle, stages) : '';
+      break;
+    case 1:
+      stages && dataTitle ? roundOf16(dataMatch, stages, dataTitle): '';
+      break;
+    case 2: 
+    stages && dataTitle ? quarterFinal(dataMatch, stages, dataTitle): '';
+      break;
+    case 3: 
+      stages && dataTitle ? semiFinal(dataMatch, stages, dataTitle): '';
+      break;
+    case 4: 
+      stages && dataTitle ? playOff(dataMatch, stages, dataTitle): '';
+      break;
+    case 5: 
+      stages && dataTitle ? final(dataMatch, stages, dataTitle): '';
+      break;
+    default:
+      break;
+  }
+}
 
 export function roundOf16(data: newTeams[], sectionStages: HTMLElement, dataTitle: HTMLElement) {
   const dataRoundOf16 = data.filter((match)=> match.stage_name === 'Round of 16');
@@ -59,25 +98,28 @@ export function controlSlide(event: Event) {
     }
   }
   slideStages();
-  observerControllers();
+  observerControllers(controllers, control);
+  insertRounds();
 }
 
 export function valueControl() {
   return control;
 }
 
-export function observerControllers() {
-  controllers.forEach((item)=> {
-    if(item.getAttribute('data-controllers') === "left" && control === 0) {
-      item.innerHTML = `<img src="./image/controls/arrow-right-white.svg" alt="left control">`
+export function observerControllers(controls: NodeList, controlItem: number, attribute: string = 'data-controllers', max:number = 5) {
+  controls.forEach((item)=> {
+    if(item instanceof HTMLElement) {
+      if(item.getAttribute(attribute) === "left" && controlItem === 0) {
+        item.innerHTML = `<img src="./image/controls/arrow-right-white.svg" alt="left control">`
+      }
+      else if(item.getAttribute(attribute) === "right" && controlItem === max) {
+        item.innerHTML = `<img src="./image/controls/arrow-right-white.svg" alt="right control">`
+      }
+      else {
+        item.innerHTML = `<img src="./image/controls/arrow-right.svg" alt="${item.getAttribute(attribute)} control">`
+      } 
     }
-    else if(item.getAttribute('data-controllers') === "right" && control === 5) {
-      item.innerHTML = `<img src="./image/controls/arrow-right-white.svg" alt="right control">`
-    }
-    else {
-      item.innerHTML = `<img src="./image/controls/arrow-right.svg" alt="${item.getAttribute('data-controllers')} control">`
-    } 
   });
 }
 
-observerControllers();
+observerControllers(controllers, control);

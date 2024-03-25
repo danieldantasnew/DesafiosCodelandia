@@ -103,6 +103,6 @@ export function handleGroups(arr: Group[], title?: HTMLElement, sectionStage?: H
           </table>
         </div>
       `
-    })
+    });
   }
 }

@@ -55,6 +55,7 @@ export function normalizateMacthes(data) {
             home_team: item.home_team,
             away_team: item.away_team,
             stage_name: item.stage_name,
+            round: item.round,
             video: item.video,
         };
     });

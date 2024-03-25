@@ -1,0 +1,12 @@
+.contentRounds {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.rounds {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
