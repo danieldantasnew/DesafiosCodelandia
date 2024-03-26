@@ -96,6 +96,7 @@ header {
 
   .menu.active .navigation ul li a {
     color: var(--secundary-color-1);
+    padding: .5rem;
   }
 
   .menu.active .navigation ul li a:hover {
