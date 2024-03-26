@@ -69,7 +69,7 @@ export function loopForMatches(arr) {
     if (arr instanceof NodeList)
         arr.forEach((item) => item.addEventListener('click', handleClickMatch));
 }
-export function loopForGames(arr, sectionFather) {
+export function loopForGames(arr, sectionFather, showStageName) {
     return {
         clearHTML: sectionFather.innerHTML = '',
         loop: arr.forEach((game) => {
@@ -87,6 +87,7 @@ export function loopForGames(arr, sectionFather) {
                     `0${game.datetime.getMinutes()}` :
                     `${game.datetime.getMinutes()}`}
           </p>
+          ${showStageName ? `<p class="stage">${stages[game.stage_name]}</p>` : ''}
         </div>
         <div class="scoreBoard">
           <div class="country">
@@ -113,7 +114,7 @@ export function loopForGames(arr, sectionFather) {
 }
 export function handleEndgames(data, games) {
     if (games) {
-        loopForGames(data, games);
+        loopForGames(data, games, true);
     }
 }
 //# sourceMappingURL=handleEndgames.js.map

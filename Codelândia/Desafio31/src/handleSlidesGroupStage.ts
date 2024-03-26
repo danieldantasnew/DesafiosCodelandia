@@ -49,7 +49,7 @@ function roundOne() {
   const title = document.querySelector<HTMLElement>('[data-title-round]');
   const contentRound = document.querySelector<HTMLElement>('[data-round]');
   if(title && contentRound && dataRoundInMatch) {
-    title.innerText = "1° Rodada";
+    title.innerText = "1° RODADA";
     const roundMatches = dataRoundInMatch.filter((match)=> match.round === "1");
     loopForGames(roundMatches, contentRound);
   }
@@ -59,7 +59,7 @@ function roundTwo() {
   const title = document.querySelector<HTMLElement>('[data-title-round]');
   const contentRound = document.querySelector<HTMLElement>('[data-round]');
   if(title && contentRound && dataRoundInMatch) {
-    title.innerText = "2° Rodada";
+    title.innerText = "2° RODADA";
     const roundMatches = dataRoundInMatch.filter((match)=> match.round === "2");
     loopForGames(roundMatches, contentRound);
   }
@@ -69,7 +69,7 @@ function roundThree() {
   const title = document.querySelector<HTMLElement>('[data-title-round]');
   const contentRound = document.querySelector<HTMLElement>('[data-round]');
   if(title && contentRound && dataRoundInMatch) {
-    title.innerText = "3° Rodada";
+    title.innerText = "3° RODADA";
     const roundMatches = dataRoundInMatch.filter((match)=> match.round === "3");
     loopForGames(roundMatches, contentRound);
   }

@@ -131,7 +131,7 @@ export function loopForMatches(arr: NodeList) {
   if(arr instanceof NodeList) arr.forEach((item)=> item.addEventListener('click', handleClickMatch));
 }
 
-export function loopForGames(arr: newTeams[], sectionFather: HTMLElement) {
+export function loopForGames(arr: newTeams[], sectionFather: HTMLElement, showStageName?: boolean) {
   return {
     clearHTML: sectionFather.innerHTML = '',
     loop: arr.forEach((game)=> {
@@ -153,6 +153,7 @@ export function loopForGames(arr: newTeams[], sectionFather: HTMLElement) {
             `${game.datetime.getMinutes()}` 
           }
           </p>
+          ${showStageName ? `<p class="stage">${stages[game.stage_name]}</p>`: ''}
         </div>
         <div class="scoreBoard">
           <div class="country">
@@ -179,6 +180,6 @@ export function loopForGames(arr: newTeams[], sectionFather: HTMLElement) {
 
 export function handleEndgames(data: newTeams[], games: HTMLElement): void {
   if(games) {
-    loopForGames(data, games);
+    loopForGames(data, games, true);
   }
 }
