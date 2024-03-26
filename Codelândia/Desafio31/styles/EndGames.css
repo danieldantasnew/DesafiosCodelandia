@@ -100,6 +100,7 @@
   justify-content: space-between;
   gap: 1rem;
   position: relative;
+  padding: 0 .5rem;
 }
 
 .scoreBoard img {
@@ -166,8 +167,12 @@
     font-size: .65rem;
   }
 
+  .infoMatch {
+    padding: 0 .5rem;
+  }
+
   .infoMatch p {
-    font-size: .56rem;
+    font-size: .5rem;
   }
 
   .infoMatch p::after {
@@ -175,7 +180,7 @@
     height: 4px;
   }
 
-  /* .matches:last-child::after {
+  .matches:last-child::after {
     padding: 4px 8px;
     font-size: .5rem;
     right: -4px;
@@ -187,7 +192,7 @@
     font-size: .5rem;
     right: -4px;
     top: -8px;
-  } */
+  }
 }
 
 @media (max-width: 359px) {
@@ -212,7 +217,7 @@
     height: 4px;
   }
 
-  /* .matches:last-child::after {
+  .matches:last-child::after {
     padding: 4px 8px;
     font-size: .4rem;
     right: -4px;
@@ -224,5 +229,5 @@
     font-size: .4rem;
     right: -4px;
     top: -8px;
-  } */
+  }
 }
